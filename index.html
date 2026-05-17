@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aura Weather | Premium Forecast</title>
+    <!-- Modern Font: Outfit -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="static/css/style.css">
+    <!-- FontAwesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="background-wrapper">
+        <div class="gradient-sphere sphere-1"></div>
+        <div class="gradient-sphere sphere-2"></div>
+        <div class="gradient-sphere sphere-3"></div>
+    </div>
+
+    <main class="glass-container">
+        <header>
+            <h1>Aura<span class="highlight">Weather</span></h1>
+            <div class="search-box">
+                <input type="text" id="cityInput" placeholder="Enter city name..." autocomplete="off">
+                <button id="searchBtn" aria-label="Search"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </div>
+            <p id="errorMessage" class="error-msg hidden">City not found. Please try again.</p>
+        </header>
+
+        <section class="weather-content hidden" id="weatherContent">
+            <div class="main-info">
+                <h2 id="cityName">London, UK</h2>
+                <div class="temp-display">
+                    <i class="fa-solid fa-cloud-sun weather-icon" id="mainIcon"></i>
+                    <span class="temperature" id="temp">24°<span class="unit">C</span></span>
+                </div>
+                <p class="condition" id="condition">Partly Cloudy</p>
+            </div>
+
+            <div class="details-grid">
+                <div class="detail-card">
+                    <i class="fa-solid fa-wind"></i>
+                    <div class="detail-info">
+                        <span class="label">Wind Speed</span>
+                        <span class="value" id="windSpeed">12 km/h</span>
+                    </div>
+                </div>
+                <div class="detail-card">
+                    <i class="fa-solid fa-droplet"></i>
+                    <div class="detail-info">
+                        <span class="label">Humidity</span>
+                        <span class="value" id="humidity">65%</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="loader hidden" id="loader">
+            <div class="spinner"></div>
+        </div>
+    </main>
+
+    <script src="static/js/main.js"></script>
+</body>
+</html>
